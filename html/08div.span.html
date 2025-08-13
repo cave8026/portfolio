@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div, span 태그</title>
+</head>
+<body>
+    <h1>div, span 태그</h1>
+    <h2>디자인 적용하기 1</h2>
+    <!--블럭요소, 인라인요소 차이점-->
+    <img src="https://imgnews.pstatic.net/image/001/2025/08/07/AKR20250807004853071_02_i_P4_20250807155712421.jpg?type=w860">
+    
+    <p style="background-color: #F08080;">LAFC는 7일(한국시간) "토트넘으로부터 
+    <p style="background-color: #4169E1;">손흥민</p>
+        을 완전 영입했다"며 "축구 역사상 가장 재능 있고 인기 있는 아시아 선수 중 한 명인 손흥민은 
+        토트넘에서 10년간 활약한 끝에 LAFC에 합류한다"고 발표했다.</p>
+    <p style="background-color: #c5a8dc;">토트넘도 홈페이지 첫 화면에 
+    <p style="background-color: #4169E1;">"쏘니(손흥민의 별명)</p>
+    가 MLS의 LAFC로 떠났다"는 제목의 글을 띄워 이적을 공식화했다.</p>
+    <hr>
+    <h2>디자인 적용하기 2</h2>
+
+    <img src="https://imgnews.pstatic.net/image/001/2025/08/07/AKR20250807004853071_02_i_P4_20250807155712421.jpg?type=w860">
+    <div style="background-color: #F08080;">
+        <p>LAFC는 7일(한국시간) "토트넘으로부터 
+        <span style="background-color: RoyalBlue; color: white">손흥민</span>
+            을 완전 영입했다"며 "축구 역사상 가장 재능 있고 인기 있는 아시아 선수 중 한 명인 손흥민은 
+            토트넘에서 10년간 활약한 끝에 LAFC에 합류한다"고 발표했다.</p>
+        <p>토트넘도 홈페이지 첫 화면에 
+        <span style="background-color: RoyalBlue; color: white ">"쏘니(손흥민의 별명)</span>
+        가 MLS의 LAFC로 떠났다"는 제목의 글을 띄워 이적을 공식화했다.</p>
+    </div>
+
+    <h2>레이아웃 구성하기 1 - div</h2>
+    <div id="header">header</div>
+    <div id="nav">nav</div>
+    <div id="main">
+        <div id="section_area">
+            <div id="section1">
+                <div id="article1">article1</div>
+                <div id="article2">article2</div>
+            </div>
+            <div id="section2">
+                <div id="article3">article3</div>  
+            </div>
+        </div>
+        <div id="aside">aside</div>
+    </div>
+    <div id="footer">footer</div>
+
+    <h2>레이아웃 구성하기 2 - 시멘틱태그</h2>
+    <header>header</header>
+    <nav>nav</nav>
+    <main>
+        <div id="section_area">
+            <section>
+                <article>article1</article>
+                <article>article2</article>
+            </section>
+            <section>
+                <article>article3</article>
+            </section>
+        </div>
+        <aside>aside</aside>
+    </main>
+    <footer>footer</footer>
+
+
+
+
+</body>
+</html>

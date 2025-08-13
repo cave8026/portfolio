@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그</title>
+    <style>
+        div { padding: 5px 0; }
+        input {padding: 5px; }
+        label { font-weight: bold;}
+        span {color: red;}
+        select { padding: 5px 10px; }
+        button { padding: 4px 10px; }
+        input[type="number"] {width: 50px;}
+    
+    </style>
+</head>
+<body>
+    
+    <h1>폼 관련 태그</h1>
+    <h2>인증 - 로그인 폼</h2>
+    <form name="loginfrm" method="post">
+        <div>
+            <label for="userid">아이디</label> 
+            <input type="text" id="userid" name="userid" minlength="8" maxlength="16">
+        </div> 
+        <!-- text는 한줄 단어 name은 서버에서 지정한 이름 minlength은 최소 글자수 maxlength 최대글자수-->
+        <div>
+            <label for="passwd">비밀번호 </label>
+            <input type="password" id="passwd" name="passwd" minlength="8" maxlength="16">
+        </div>
+        <div>
+            <button type="submit">로그인하기</button>
+            <!-- button type="submit"해야만 서버로 넘어감 -->
+        </div>
+
+    </form>
+
+    <h2>회원가입 폼</h2>
+    <form name="joinftm">
+        <div>
+            <label for="name">이름 <span>*</span></label>
+            <input type="text" id="name" name="name">
+            
+        </div>
+        <div>
+            <label for="gm">성별 <span>*</span></label>
+            <input type="radio" id="gm" name="gender" value="male">남
+            <input type="radio" id="gf" name="gender" value="female">여
+            
+        </div>
+        <div>
+            <label for="newsmaily">뉴스메일</label>
+            <input type="radio" id="newsmaily" name="newsmail" value="yes">받습니다.
+            <input type="radio" id="newsmailno" name="newsmail" value="no">받지 않습니다.
+            
+        </div>
+        <div>
+            <label for="smsy">SMS안내(이벤트)</label>
+            <input type="radio" id="smsy" name="sms" value="yes">받습니다.
+            <input type="radio" id="smsn" name="sms" value="no">받지 않습니다.
+            
+        </div>
+        <div>
+        
+            <label for="byear">생년월일</label>
+            <select  id="byear" name="byear">
+                <option>년도</option>
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+            </select>년
+            <select id="bmonth" name="bmonth">
+                <option>- 월 -</option>
+                <option>- 01 -</option>
+                <option>- 02 -</option>
+                <option>- 03 -</option>
+                <option>- 04 -</option>
+                <option>- 05 -</option>
+                <option>- 06 -</option>
+                <option>- 07 -</option>
+                <option>- 08 -</option>
+            </select>월
+            <select name="bday" id="bday">
+                <option>- 일 -</option>
+                <option>- 01 -</option>
+                <option>- 02 -</option>
+                <option>- 03 -</option>
+                <option>- 04 -</option>
+                <option>- 05 -</option>
+                <option>- 06 -</option>
+                <option>- 07 -</option>
+                <option>- 08 -</option>
+
+            </select>일
+        </div>
+    
+        <div>
+            
+            <label for="ponf"><span>*</span>핸드폰</label>
+            <select name="ponf" id="ponf">
+                <option>선택</option>
+                <option>010</option>
+            </select>-
+                <input type="number" id="ponm" name="ponm" maxlength="4">-
+                <input type="number" id="ponf" name="ponf" maxlength="4">
+        </div>
+        <div>
+            <label for="email1"><span>*</span>이메일</label>
+            <input type="text" id="email1" name="email1">@
+            <select name="email2" id="email2">
+                <option>-도메인-</option>
+                <option>naver.com</option>
+                <option>gmail.com</option>
+            </select>
+            <button type="button">중복확인</button>
+            
+        </div>
+        <div>
+            <label for="addr1">기본주소</label>
+            <input type="text" id="zipcode" name="zipcode" size="4">
+            <button type="button">우편번호검색</button>
+            <div><input type="text" id="addr1" name="addr1"></div>
+            <div><input type="text" id="addr2" name="addr2"></div>
+        </div>
+        <div>
+            <label for="interest">관심분야</label>
+            <!-- checkbox 중복선택 가능 -->
+            <input type="checkbox" id="interest" name="interest" value="sporth">스포츠
+            <input type="checkbox" id="iart" name="interest" value="art">예술
+            <input type="checkbox" id="igame" name="interest" value="game">게임
+            <input type="checkbox" id="itrip" name="interest" value="trip">여행
+            <input type="checkbox" id="ibook" name="interest" value="book">독서
+            <input type="checkbox" id="imovie" name="interest" value="movie">영화
+            <input type="checkbox" id="ipol" name="interest" value="political">사회/정치
+        </div>
+        <div>
+            <label for="attach">첨부파일</label>
+            <input type="file" id="attach" name="attach">
+        </div>
+        <div>
+            <button type="submit">가입하기</button>
+            <button type="reset">다시입력</button>
+        </div>
+
+</body>
+</html>
