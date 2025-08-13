@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 연습</title>
+    <style>
+        button{
+            box-shadow: 2px 2px 2px black; /*테두리에 그림자를 만드는것*/
+        }
+            .box1{
+                width: 500px;
+                height: 500px;
+                border: 1px solid black;/*shorthand 표기법*/
+                /*
+                border- width 1px;
+                border-style: solid;
+                border-color: black;
+                */
+                border-top-width: 10px;
+                border-left-width: 10px;
+                border-right-width: 10px;
+            }
+            .box2{
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                border-radius: 50%;
+                /* border-radius: 50%; */
+            }
+    </style>
+</head>
+<body>
+    <button>DO IT!</button>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+</body>
+</html>
