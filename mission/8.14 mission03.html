@@ -16,36 +16,31 @@
             height: 50px;
             background-color: gray;
         }
-        article {
+        article{
             float: left;
             width: 80%;
             height: 500px;
             background-color: #eeeeee;
-            position: relative; /* 자식 absolute 기준 */
         }
-
-        .box {
+        .box{
+            
+        }
+        #box1{
             width: 100px;
             height: 100px;
-            line-height: 100px;
-            text-align: center;
-
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-left: -50px; /* 박스 너비의 절반 */
-            margin-top: -50px;  /* 박스 높이의 절반 */
-        }
-
-        #box1 {
             background-color: gold;
+            position:absolute;
+            left: 40%;
+            top: 40%;
         }
-
-        #box2 {
+        #box2{
+            width: 100px;
+            height: 100px;
             background-color: greenyellow;
-            margin-left: -160px; /* 박스1보다 왼쪽으로 이동 */
+            position:absolute;
+            left: 30%;
+            top: 40%;
         }
-        
         aside{
             float: left;
             width: 20%;
@@ -71,11 +66,12 @@
     <!-- /navigation -->
     
     <!-- 컨텐트 -------------------------------------------------->
-    <article class="article">
-        글로벌아이티 소개
-        <p class="box" id="box1">박스1</p>
-        <p class="box" id="box2">박스2</p>
-    </article>
+    <div>
+        <article class="article">글로벌아이티 소개
+            <p class="box" id="box1">박스1</p>
+            <p class="box" id="box2">박스2</p>
+        </article>
+    </div>
 
     <!-- /컨텐트 -->
 
