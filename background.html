@@ -7,11 +7,30 @@
     <style>
         body{
             /* background-color: olive; */
-            background-image: url(img/bg1.jpg);
+            background-image: url(img/bg1.jpg); /*배경이미지 삽입 그배경을 계속 이어붙임 */
+            /* background-repeat: no-repeat; */ /*배경을 이어붙이지 않음*/
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background: url(img/bg4.jpg) no-repeat left top;
+        }
+        #bg1{background-size: auto;} /*원래 이미지 크기로 출력*/
+        #bg2{background-size: 200px;} /*너비는200px,높이는 자도계산*/
+        #bg3{background-size: 50%;} /*너비는 요소기준으로 50% 높이는 자동계산*/
+        #bg4{background-size: 100% 100%;} /*높이 너비를 요소에 100% 맞춤*/
+        #bg5{background-size: contain;} /*요소의 배경이미지가 다보이게 표시*/
+        #bg6{background-size: cover; /*요소를 완전히 덮도록 배경이미지 표시*/
+            background-position: -50px; /*이미지 위치를 옆으로 50픽셀이동*/
         }
     </style>
 </head>
 <body>
-    
+    <div class="box" id="bg1"></div>
+    <div class="box" id="bg2"></div>
+    <div class="box" id="bg3"></div>
+    <div class="box" id="bg4"></div>
+    <div class="box" id="bg5"></div>
+    <div class="box" id="bg6"></div>
 </body>
 </html>
