@@ -16,28 +16,27 @@
             height: 50px;
             background-color: gray;
         }
-        .box{
+        .content {
+            display: flex;
             height: 500px;
             text-align: center;
-            line-height: 500px;
         }
-        article{
-            float: left;
-            margin: auto;
+
+        .sidebar {
+            width: 20%;
+            background-color: blue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-article {
             width: 60%;
             background-color: greenyellow;
-            }
-        #box1{
-            float: left;
-            width: 20%;
-            color: white;
-            background-color: blue;   
-        }
-        #box2{
-            float: right;
-            width: 20%;
-            color: white;
-            background-color: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
    
         footer{
@@ -60,12 +59,11 @@
     <!-- /navigation -->
     
     <!-- 컨텐트 -------------------------------------------------->
-    <a class="box" id="box1" href="#">box1</a>
-    <article class="box">글로벌아이티 소개</article>
-    <a class="box" id="box2" href="#">box2</a>
-
-  
-    
+<main class="content">
+    <div class="sidebar">box1</div>
+    <article class="main-article">글로벌아이티 소개</article>
+    <div class="sidebar">box2</div>
+</main>
     <!-- /컨테츠 -->
 
     <!-- 꼬릿말 -------------------------------------------------->
