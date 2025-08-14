@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position연습</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        #pos1{
+            position: absolute; /*부모(body)를 기준으로*/
+            left: 50px; /*왼쪽기준으로 오른쪽으로 50픽셀 이동*/
+            top: 50px; /*위를 기준으로 아래로 50픽셀 이동*/
+        }
+        #pos2{
+            position: absolute;
+            right: 100px; /*오른쪽 기준으로 왼쪽으로 100픽셀 이동*/
+            top: 100px; /*위를 기준으로 아래로 100픽셀 이동*/
+        }
+        #pos3{
+            position: absolute;
+            left: 100px; /*왼쪽기준으로 오른쪽으로 100픽셀 이동*/
+            bottom: 100px;  /*아래를 기준으로 위로 100픽셀 이동*/
+        }
+    </style>
+</head>
+<body>
+    <p class="box" id="pos1">position연습 1</p>
+    <p class="box" id="pos2">position연습 2</p>
+    <p class="box" id="pos3">position연습 3</p>
+</body>
+</html>

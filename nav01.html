@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation</title>
+    <style>
+        nav > ul {list-style: none;} /* li태그의 기호 없이 출력*/
+        nav ul li{ /*자식을 한번에 찾는것 */
+            display:inline-block; /*li태그를 가로방향으로 출력, 박스형태로 만듬*/
+            width: 100px; /*너비 100px*/
+            height: 40px; 
+            line-height: 40px;
+            text-align: center;
+            margin: 10px;
+            border: 1px solid #222;
+        }
+        a{text-decoration: none;}/*언더라인(밑줄) 지우는법*/
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">메뉴1</a>
+            </li>
+            <li>
+                <a href="#">메뉴2</a>
+            </li>
+            <li>
+                <a href="#">메뉴3</a>
+            </li>
+            <li>
+                <a href="#">메뉴4</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
