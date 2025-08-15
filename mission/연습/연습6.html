@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            width:600px;
+            border: 2px solid #000;
+            text-align: center;
+        }
+        th, td {
+            padding: 10px 20px;
+        }
+        thead{
+            background-color: #ccc
+        }
+        tfoot{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+   <table>
+    <caption>요안도라객실</caption>
+    <colgroup>
+        <col style="background-color: #eee;">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>방 이름</th>
+            <th>대상</th>
+            <th>크기</th>
+            <th>가격</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>유채방</td>
+            <td>여성 도미토리</td>
+            <td rowspan="3">4인실</td>
+            <td rowspan="4">1인 20,000</td>
+        </tr>
+        <tr>
+            <td rowspan="2">동백방</td>
+            <td>동성 도미토리</td>
+
+        </tr>
+        <tr>
+            <td>가족 1팀</td>
+        </tr>
+        <tr>
+            <td>천혜향방</td>
+            <td>-</td>
+            <td>2인실</td>
+        </tr>
+        <tfoot>
+        <tr>
+            <td colspan="4">바깥채 전체를 렌트합니다</td>
+            </tr>
+        </tfoot>
+    </tbody>
+   </table> 
+   <div>
+    <a href="https://www.naver.com/"><img src="KakaoTalk_20250813_145335523.jpg" alt="단비" width="480"></a>
+    <figcaption>이단비</figcaption>
+    <!-- 설명글 택스트 -->
+    <!-- figure는 여러이미지를 묶고 그안에 figcaption을 사용해 묶어서 설명 -->
+   </div>
+</body>
+</html>
