@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin:0; padding: 0; box-sizing: border-box;}
+
+        #mom {
+            float: left;
+        }
+        .box {
+            position: relative;
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+            overflow: hidden;    
+        }
+        .a {
+            position: absolute;
+            bottom: -80%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(172, 171, 171, 0.8);
+            color: white;
+            transition: bottom 0.5s ease;
+        }
+
+
+        .box:hover .a {
+            bottom: 0;
+            
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="mom">
+            <div id="one" class="box"><img src="img2/img_5terre.jpg" alt="섬">
+                <div class="a">제목
+                    <p>이곳은 본문</p>
+                </div>
+                </div>
+            </div>
+            <div id="tow" class="box"><img src="img2/img_forest.jpg" alt="숲">
+                <div class="a">제목
+                    <p>이곳은 본문</p>
+                </div>
+            </div>
+            <div id="three" class="box"><img src="img2/img_lights.jpg" alt="오로라">
+                <div class="a">제목
+                    <p>이곳은 본문</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+
+
