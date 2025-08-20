@@ -12,10 +12,13 @@
             background-color: black;
             color: white;
         }
+        /* ------------------------------------------------------------------- */
         nav{
             display: flex;
             height: 50px;
             background-color: gray;
+            margin: 0;  
+            padding: 0;
         }
         ul{
             width: 100px;
@@ -27,14 +30,10 @@
         li {
             height: auto;
             list-style-type: none;
-            margin: 0;  
-            padding: 0;
             animation: rotate 1s alternate;
         }
         #Program > li {
             display: none;
-            margin: 0;
-            padding: 0;
             background: rgb(158, 154, 154);
             border: 1px solid black;
             
@@ -46,6 +45,11 @@
          0%{transform: translateY(-20px) ;}
          100%{transform: translateY(00px) ;}
         }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        /* -------------------------------------------------------- */
         article{
             float: left;
             width: 80%;
@@ -86,10 +90,11 @@
             <li></li>
         </ul>
         
+        
         <ul id="Program">과정소개
-            <li id="back" class="hide">백엔드과정</li>
-            <li id="pull" class="hide">풀스택과정</li>
-            <li id="uiux" class="hide">UI/UX과정</li>
+            <li id="back" class="hide"><a href="img2/img_5terre.jpg">백엔드과정</a></li>
+            <li id="pull" class="hide"><a href="img2/img_forest.jpg">풀스택과정</a></li>
+            <li id="uiux" class="hide"><a href="img2/img_lights.jpg">UI/UX과정</a></li>
         </ul>
 
         <ul>Contact
