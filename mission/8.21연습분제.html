@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.21연습문제</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+         .container{
+            display: flex;
+            flex-flow: row wrap;
+            max-width: 100%;
+            height: auto;
+            gap: 3px;
+        }
+        .box{
+            justify-content: space-around;    
+        }
+        .box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media screen and (min-width:1025px){
+            .box {flex-basis: 23%;
+            }
+        }
+        @media screen and (min-width:769px) and (max-width:1024px) {
+            .box{
+           align-content: flex-start; 
+            }      
+        }
+
+
+        @media screen and (max-width:768px) {
+            .box{
+            flex-basis: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="img2/kitten-1.jpg" alt="고양이1">
+        </div>
+        <div class="box">
+            <img src="img2/kitten-2.jpg" alt="고양이2">
+        </div>
+        <div class="box">
+            <img src="img2/kitten-3.jpg" alt="고양이3">
+        </div>
+        <div class="box">
+            <img src="img2/cat-2068462_640 (1).jpg" alt="고양이4">
+        </div>
+    </div>
+</body>
+</html>
