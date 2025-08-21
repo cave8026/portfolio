@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX연습</title>
+    <style>
+        .container{
+            width: 500px;
+            display: flex; /* 플렉스 컨테이너 지정 */
+            background-color: #eee;
+            border: 1px solid #222;
+            margin-bottom: 30px;
+            height: 300px;
+        }
+        .item{
+            background-color: orange;
+            width: 100px;
+            height: 50px;
+            margin: 5px;
+        }
+        #opt1{flex-direction: row;/* 가로방향 기본값 */}
+        #opt2{flex-direction: row-reverse; /* 가로방향 오른쪽부터출력 */}
+        #opt3{flex-direction: column; /* 세로방향 */}
+        #opt4{flex-direction: column-reverse; /* 세로방향 아래서부터 출력 */ }
+        #opt5{flex-flow: row wrap;}
+
+        #opt6{justify-content: flex-start;}
+        #opt7{justify-content: flex-end;}
+        #opt8{justify-content: center;} /* 자주씀 */
+        #opt9{justify-content: space-between;}
+        #opt10{justify-content: space-around;}
+        #opt11{justify-content: space-evenly;}
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="item">1</div>
+        <div class="item" style="background-color: green;">2</div>
+        <div class="item">3</div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="item">1</div>
+        <div class="item" style="background-color: green;">2</div>
+        <div class="item">3</div>
+    </div>
+    <div class="container" id="opt3">
+        <div class="item">1</div>
+        <div class="item" style="background-color: green;">2</div>
+        <div class="item">3</div>
+    </div>
+    <div class="container" id="opt4">
+        <div class="item">1</div>
+        <div class="item" style="background-color: green;">2</div>
+        <div class="item">3</div>
+    </div>
+    <div class="container" id="opt5">
+        <div class="item">1</div>
+        <div class="item" style="background-color: green;">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    <div class="container" id="opt6">
+        <div class="item">1</div>
+        <div class="item" style="background-color: green;">2</div>
+        <div class="item">3</div>
+    </div>
+    <div class="container" id="opt7">
+        <div class="item">1</div>
+        <div class="item" style="background-color: green;">2</div>
+        <div class="item">3</div>
+    </div>
+    <div class="container" id="opt8">
+        <div class="item">1</div>
+        <div class="item" style="background-color: green;">2</div>
+        <div class="item">3</div>
+    </div>
+    <div class="container" id="opt9">
+        <div class="item">1</div>
+        <div class="item" style="background-color: green;">2</div>
+        <div class="item">3</div>
+    </div>
+    <div class="container" id="opt10">
+        <div class="item">1</div>
+        <div class="item" style="background-color: green;">2</div>
+        <div class="item">3</div>
+    </div>
+    <div class="container" id="opt11">
+        <div class="item">1</div>
+        <div class="item" style="background-color: green;">2</div>
+        <div class="item">3</div>
+    </div>
+
+</body>
+</html>
