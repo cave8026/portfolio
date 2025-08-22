@@ -25,24 +25,26 @@
             display: block;
         }
 
+        /* 데스크톱: 1025px 이상 - 한 줄에 4개 */
         @media screen and (min-width:1025px){
-            .box {flex-basis: 23%;
+            .box {
+                flex-basis: 23%;
             }
         }
+        
+        /* 태블릿: 769px~1024px - 한 줄에 2개씩 (2x2 배치) */
         @media screen and (min-width:769px) and (max-width:1024px) {
             .box{
-           align-content: flex-start; 
+                flex-basis: 48.5%; 
             }      
         }
 
-
+        /* 모바일: 768px 이하 - 한 줄에 1개 */
         @media screen and (max-width:768px) {
             .box{
-            flex-basis: 100%;
+                flex-basis: 100%;
             }
-
         }
-
     </style>
 </head>
 <body>
