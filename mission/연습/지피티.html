@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>타이핑 게임</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #word {
+      font-size: 32px;
+      margin: 20px;
+    }
+    #input {
+      font-size: 20px;
+      padding: 10px;
+    }
+    #score, #time {
+      font-size: 20px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 타이핑 게임</h1>
+  <div id="word">로딩 중...</div>
+  <input type="text" id="input" placeholder="단어를 입력하세요" autofocus />
+  <div id="score">점수: 0</div>
+  <div id="time">남은 시간: 30초</div>
+
+  <script>
+    const words = ['apple', 'banana', 'javascript', 'keyboard', 'hangul', 'dragon', 'space', 'orange', 'typhoon', 'computer'];
+    let currentWord = '';
+    let score = 0;
+    let time = 30;
+
+    const wordElement = document.getElementById('word');
+    const inputElement = document.getElementById('input');
+    const scoreElement = document.getElementById('score');
+    const timeElement = document.getElementById('time');
+
+    function getRandomWord() {
+      return words[Math.floor(Math.random() * words.length)];
+    }
+
+    function showNewWord() {
+      currentWord = getRandomWord();
+      wordElement.textContent = currentWord;
+    }
+
+    inputElement.addEventListener('input', () => {
+      if (inputElement.value === currentWord) {
+        score++;
+        scoreElement.textContent = `점수: ${score}`;
+        inputElement.value = '';
+        showNewWord();
+      }
+    });
+
+    function startGame() {
+      showNewWord();
+      const countdown = setInterval(() => {
+        time--;
+        timeElement.textContent = `남은 시간: ${time}초`;
+        if (time <= 0) {
+          clearInterval(countdown);
+          wordElement.textContent = '⏰ 게임 종료!';
+          inputElement.disabled = true;
+        }
+      }, 1000);
+    }
+
+    startGame();
+  </script>
+
+</body>
+</html>
