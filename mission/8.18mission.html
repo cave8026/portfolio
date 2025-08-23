@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS연습</title>
+    <style>
+    img {
+        width: 600px;
+        height: 400px
+    }
+
+    div .gallery {
+        border: 1px;
+    }
+    div .gallery:hover{ /* 마우스를 올렸을때 나타나는 스타일*/
+        border: 1px solid #777;
+    }
+    div .gallery img {
+        width: 100%; /*이미지 가로길이를 화면 비율에 맞춤*/
+        height: auto; /*이미지 세로길이를 화면 비율에 맞춤*/
+    }
+    div .desc {
+        padding: 15px; /*설명글 사이즈*/
+        text-align: center; /*설명글 가운데 맞춤*/
+    }
+     * { /*모든 요소를 의미*/
+        box-sizing: border-box; /*레이아웃 계산이 쉬워짐*/
+    }
+    .responsive { /* 큰화면에서 적용되는 스타일 */
+        padding: 0 6px; /* 위아래 여백 0px 좌우 6px 여백추가 */
+        float: left; /* 왼쪽으로 붙어서 가로로 나란히 배치 */
+        width: 24.99999%; /* 한 줄에 4개 들어가도록 1/4 크기 */
+    }
+
+    @media only screen and (max-width: 700px){ /* 화면이 700px 이하로 줄어들 때만 이 안의 CSS가 적용돼요. 즉, PC에서는 적용 안 되고, 태블릿이나 작은 창 크기에서 동작. */
+        .responsive{
+            width: 49.99999%; /* 한 줄에 2개 들어가도록 1/2 크기 */
+            margin: 6px 0; /* 위아래 6px 여백추가 */
+        }
+    }
+    @media only screen and (max-width: 500px) { /* 화면이 500px 이하일 때만 적용. 보통 스마트폰 화면을 의미. */
+         .responsive {          
+    width: 100%; /* 한 줄에 1개 들어가도록 1/1 크기 */
+  }
+}
+    .clearfix:after {
+        content: ""; /* 가상 요소를 만들기 위해 내용이 필요해서 빈 문자열을 넣은 거 */
+        display: table; /* table은 브라우저에서 조금 더 안정적으로 레이아웃을 정리 */
+        clear: both; /* float: left;나 float: right;로 띄운 요소들이 부모의 높이를 무시하는 문제를 해결해 줍니다. */
+    }
+    </style>
+</head>
+<body>
+
+<h2>Responsive Image Gallery</h2>
+
+<h4>Resize the browser window to see the effect.</h4>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img2/img_5terre.jpg">
+      <img src="img2/img_5terre.jpg" alt="Cinque Terre" >
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img2/img_forest.jpg">
+      <img src="img2/img_forest.jpg" alt="Forest">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img2/img_lights.jpg">
+      <img src="img2/img_lights.jpg" alt="Northern Lights" >
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img2/img_mountains.jpg">
+      <img src="img2/img_mountains.jpg" alt="Mountains">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+</div>
+
+</body>
+</html>

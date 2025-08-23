@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+/* Reset */
+*{margin:0;padding:0;box-sizing:border-box;}
+ul,ol{list-style:none;}
+a{text-decoration:none;color:#aaa;}
+body{position:fixed;width:100%;height:100%;background:#111;font-family:'Cormorant Garamond', serif;}
+
+/* 배경 동영상 */
+.vid{width:100%;height:100%;position:fixed;top:0;left:0;opacity:0.8;z-index:-1;}
+.vid video{width:100%;min-width:1600px;}
+
+/* Dior 로고 */
+h1{position:fixed;top:40px;left:40px;z-index:10;}
+h1 img{width:200px;height:auto;filter:brightness(0) invert(1);} /* 흰색 느낌 */
+
+
+/* header 영역 */
+header {
+  width: 650px;
+  height: 100%;
+  position: fixed;
+  background: #000;
+  transform: skewX(-40deg);
+  left: -400px;
+  border-right: 1px solid #d4af37; /* 골드 라인 */
+  z-index: 5;
+}
+
+/* 1depth 메뉴 */
+#gnb {
+  width: 220px;
+  position: absolute;
+  top: 150px;
+  right: 0;
+}
+#gnb > li {
+  position: relative;
+}
+#gnb > li > a {
+  display: block;
+  width: 220px;
+  height: 50px;
+  font: 600 18px/3 'Cormorant Garamond', serif;
+  color: #fff;
+  text-align: right;
+  padding-right: 40px;
+  transition: 0.3s;
+}
+#gnb > li.on > a,
+#gnb > li:hover > a {
+  background: #d4af37;
+  color: #111;
+}
+#gnb em {
+  display: inline-block;
+  transform: skewX(40deg);
+}
+
+/* 2depth 메뉴 (서브메뉴) */
+#gnb ul {
+  position: absolute;
+  top: 0;
+  left: 205px;             
+  opacity: 0;
+  transform: translateX(-20px); 
+  pointer-events: none;   
+  transition: all 0.4s ease;
+}
+#gnb > li:hover ul {
+  opacity: 1;
+  transform: translateX(0); 
+  pointer-events: auto;     
+}
+#gnb ul a {
+  display: block;
+  width: 150px;
+  height: 40px;
+  background: #111;
+  border-bottom: 1px solid #333;
+  font: 500 16px/2.5 'Cormorant Garamond', serif;
+  color: #fff;
+  padding-left: 30px;
+  transition: 0.3s;
+}
+#gnb ul a:hover {
+  background: #d4af37;
+  color: #111;
+}
+
+/* SNS */
+#sns{position:fixed;top:60px;right:50px;}
+#sns li{float:left;margin-right:25px;}
+#sns .fa{font-size:22px;color:#d4af37;opacity:0.6;transition:0.3s;}
+#sns .fa:hover{opacity:1;transform:scale(1.2);}
+
+/* 텍스트 박스 */
+.txtBox {
+  width: 450px; 
+  height: auto;
+  position: fixed;
+  top: 220px;
+  right: 70px;
+  text-align: right;
+}
+
+/* 메인 타이틀 */
+.tit {
+  font-size: 100px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -1px;
+  line-height: 1;         
+  margin-bottom: 10px;    
+}
+
+/* 보조 텍스트 */
+.txt {
+  font-size: 28px;
+  font-family: 'Cormorant Garamond', serif;
+  color: #eee;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.txt b {
+  font-weight: 600;
+  color: #d4af37;
+  margin-left: 8px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+}
+
+
+/* 사이드 컨텐츠 */
+#side{width:800px;height:100%;position:fixed;right:-800px;bottom:0;
+  background:#111;opacity:0.5;transform:skewX(-40deg);transition:0.5s;}
+#side:hover{right:-500px;opacity:0.9;}
+#side .con{width:400px;height:100%;position:absolute;left:150px;bottom:0;background:#000;padding:10px;}
+#side .con p{width:300px;height:100px;position:absolute;left:50px;}
+#side .con p em{display:inline-block;font:600 16px 'Cormorant Garamond', serif;color:#d4af37;transform:skewX(40deg);}
+#side .con p img{width:300px;height:70px;opacity:0.3;transition:0.4s;}
+#side .con p img:hover{opacity:1;}
+
+/* 애니메이션 아이콘 */
+#side .btnContents{width:150px;height:50px;position:absolute;bottom:40px;left:100px;color:#d4af37;transform:skewX(40deg);}
+#side:hover .btnContents{left:700px;}
+.btnContents i{font-size:50px;opacity:0;animation:ani linear 1.5s infinite;}
+.btnContents i:nth-child(2){animation-delay:0.5s;}
+.btnContents i:nth-child(3){animation-delay:1s;}
+
+@keyframes ani {
+  0%{right:0;opacity:0;transform:scale(1);}
+  100%{right:100px;opacity:1;transform:scale(1.0);}
+}
