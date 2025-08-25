@@ -20,13 +20,13 @@
     .navbar-default{
       background: #212121;
     }
-   .navbar-default .navbar-nav > li > a,
-.navbar-default .navbar-brand {
-  color: #e0f7fa !important;
-}
-.navbar-default .navbar-nav > li > a:hover {
-  color: #80deea !important; 
-}
+
+    .navbar-default .navbar-brand {
+    color: #e0f7fa !important;
+    }
+    .navbar-default .navbar-nav > li > a:hover {
+    color: #80deea !important; 
+    }
     .container{
       padding-top: 150px;
       padding-bottom: 80px;
@@ -46,20 +46,22 @@
     #subject{
       background: #eeeeee;
     }
-     .thumbnail {
-      flex: 1;
+    .row.equal-height {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .row.equal-height > [class*='col-'] {
+      display: flex;
+    }
+    .row.equal-height > [class*='col-'] .thumbnail {
+      display: flex;
       flex-direction: column;
       justify-content: space-between;
-    } 
-      .thumbnail {
       flex: 1;
-      display: flex;            
-      flex-direction: column;
     }
     .thumbnail img {
       width: 100%;
-      height: 250px;       
-      object-fit: cover;  
+      height: 250px;     
     }
 
     .thumbnail button {
@@ -211,8 +213,8 @@
       <h1>교육과정</h1>
       <p>K-Digital Training. 국비지원 교육과정</p>   
   
-      <div class="row" >
-        <div class="col-sm-4" style="display: flex;">
+      <div class="row equal-height">
+        <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="thumbnail">
             <img src="img/자바스프링.jpg" alt="교육과정이미지">
             <p><strong>풀스택 프레임워크(자바,스프링)기반 데이터 융합SW개발자 과정</strong></p>
@@ -220,7 +222,7 @@
             <button class="btn">more</button>
           </div>
         </div>
-        <div class="col-sm-4" style="display: flex;">
+         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="thumbnail">
             <img src="img/인공지능.jpg" alt="교육과정이미지">
             <p><strong>산업프로젝트 기반 인공지능 빅데이터 분석가 과정</strong></p>
@@ -228,7 +230,7 @@
             <button class="btn">more</button>
           </div>
         </div>
-        <div class="col-sm-4" style="display: flex;">
+         <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="thumbnail">
             <img src="img/cloud.jpeg" alt="교육과정이미지">
             <p><strong>데브옵스MSA컨테이너 기반 클라우드 네이티브 엔지니어 전문가 과정</strong></p>
