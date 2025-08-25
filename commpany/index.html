@@ -9,10 +9,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-    .navbar-default{
-      background: rgb(36, 91, 163);
+   @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Nanum+Gothic&family=Nanum+Pen+Script&display=swap');
+    #about{
+      font-family: "Nanum Gothic", sans-serif;
     }
+    .thumbnail{   
+      font-family: "Gothic A1", sans-serif;
+    } 
 
+    .navbar-default{
+      background: #212121;
+    }
+   .navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand {
+  color: #e0f7fa !important;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #80deea !important; 
+}
     .container{
       padding-top: 150px;
       padding-bottom: 80px;
@@ -32,6 +46,26 @@
     #subject{
       background: #eeeeee;
     }
+     .thumbnail {
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+    } 
+      .thumbnail {
+      flex: 1;
+      display: flex;            
+      flex-direction: column;
+    }
+    .thumbnail img {
+      width: 100%;
+      height: 250px;       
+      object-fit: cover;  
+    }
+
+    .thumbnail button {
+      margin-top: auto;         
+      align-self: center;       
+    }
 
     footer{
       background-color: #858585;
@@ -45,6 +79,14 @@
     footer a:hover{
       color: skyblue;
       text-decoration: none;
+    }
+    .carousel-caption {
+      position: absolute;
+      top: 20px;       
+      left: 20px;      
+      right: auto;     
+      bottom: auto;    
+      text-align: center; 
     }
   </style>
 
@@ -169,26 +211,26 @@
       <h1>교육과정</h1>
       <p>K-Digital Training. 국비지원 교육과정</p>   
   
-      <div class="row">
-        <div class="col-sm-4">
+      <div class="row" >
+        <div class="col-sm-4" style="display: flex;">
           <div class="thumbnail">
-            <img src="img/pic01.jpg" alt="교육과정이미지">
+            <img src="img/자바스프링.jpg" alt="교육과정이미지">
             <p><strong>풀스택 프레임워크(자바,스프링)기반 데이터 융합SW개발자 과정</strong></p>
             <p>K-Digital Training</p>
             <button class="btn">more</button>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4" style="display: flex;">
           <div class="thumbnail">
-            <img src="img/pic02.jpg" alt="교육과정이미지">
+            <img src="img/인공지능.jpg" alt="교육과정이미지">
             <p><strong>산업프로젝트 기반 인공지능 빅데이터 분석가 과정</strong></p>
             <p>K-Digital Training</p>
             <button class="btn">more</button>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4" style="display: flex;">
           <div class="thumbnail">
-            <img src="img/pic03.jpg" alt="교육과정이미지">
+            <img src="img/cloud.jpeg" alt="교육과정이미지">
             <p><strong>데브옵스MSA컨테이너 기반 클라우드 네이티브 엔지니어 전문가 과정</strong></p>
             <p>K-Digital Training</p>
             <button class="btn">more</button>
@@ -203,7 +245,7 @@
   <div id="contact" class="container text-center">
     <h1>Contact</h1>
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-4" style="text-align: left;">
         <p><span class="glyphicon glyphicon-map-marker"></span>서울시 관악구 남부순환로 1820,에그엘로우14층 </p>
         <p><span class="glyphicon glyphicon-phone"></span>02-6020-0055</p> 
       </div>
