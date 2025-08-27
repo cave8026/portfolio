@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            box-sizing: border-box;
+            width: 1000px;
+        }
+        .box{width: 500px; height: 300px;}
+        #box1{background: red; float: left;}
+        #box2{background: green;float: left;}
+        
+        #box3{background: blue;float:right !important;}
+        #box4{background: orange;float: right !important;}
+
+        @media screen and (max-width:768px) {
+            .container{
+                width: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+    </div>
+    <div class="container" style="clear: both !important;">
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+    </div>
+</body>
+</html>

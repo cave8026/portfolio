@@ -18,84 +18,89 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <!-- /slick slider -->
 
-  <!-- Fontawesom -------------------------------------------------------->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- /Fontawesom -->
+  <!-- fontawesom ------------------------------------------------------------------------------------------------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1&family=Nanum+Gothic&family=Noto+Sans+KR:wght@900&display=swap');
-    body{
-      background: #eeeeee;
+    .navbar{
+      background: white !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      height: 70px;
     }
-  
+
+    body{background: #eeeeee;}
+
+    #collapsibleNavbar .dropdown-toggle:hover+.dropdown-menu{
+      display: block;
+    }
+
+
     .slider-pc{display: block !important;}  
-      .slider-m{display: none !important;}  
-  
+    .slider-m{display: none !important;}  
+    
     .slider-container { 
-        max-width: 1500px;
-        height: 600px !important;
-        margin: 50px auto;
+      max-width: 1500px;
+      height: 570px !important;
+      margin: 50px auto;
     }
 
     .slide{
-        position: relative; /* 부모의 position 설정*/
-        color: white;
+      position: relative; /* 부모의 position 설정 */
+      color: white;
     }
+
     .slide h3{font-family: "Noto Sans KR", sans-serif;font-optical-sizing: auto;font-weight: 900;font-style: normal;}
     .slide p {font-family: "Gothic A1", sans-serif;font-weight: 700;font-style: normal;}
     .slide .caption,.slide .caption-1,
+    .slide .caption, 
     .slide .more{
-        position: absolute; /* 자식의 position: absolute 설정, grouping*/
+      position: absolute; /* 자식 position:absolute 설정. grouping */
     }
     .slide .caption{
-        left: 5px;
-        top: 200px;
-    }
-    .slide .caption-1{
-        left: 5px;
-        top: 190px;
-
+      left: 5px;
+      top:200px;
     }
     .slide .more{
-        left: 5px;
-        top: 330px;
+      left: 5px;
+      top:300px;
     }
-
     .slide .more .btn{
         width:300px;
     }
+
     .slider .slide {
-        width: 500px;
-        margin: 0 10px; /* 슬라이드 간 간격 */
+      width: 500px;
+      margin: 0 10px; /* 슬라이드 간 간격 */
     }
-  
+    
     .slider .slide img {
-        width: 100%;
-        height: 570px;
-        border-radius: 10px;
+      width: 100%;
+      height: 570px;
+      border-radius: 10px;
     }
 
     .slider .slide .btn{
-        background-color: white;
-        color: black;
-        font-weight: bold;
-        padding-left: 50px;
-        padding-right: 50px;
-        border: none;
-        border-radius: 50px;
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      padding-left: 50px;
+      padding-right: 50px;
+      border:none;
+      border-radius: 50px;
     }
-    
+
     .container h1{
         text-align: center;
         font-size: 30px;
      }
-    
+
     .thumbnail{
-        border-radius: 10px !important;
-        background: white;
-        width: 400px;
+      border-radius: 10px !important;
+      background: white;
+      width: 400px;
     }
-    
     .thumbnail{
         font-family: "Noto Sans KR", sans-serif;
         font-optical-sizing: auto;
@@ -103,12 +108,11 @@
         font-style: normal;
         font-size: 21px;
     }
-
     .thumbnail img{
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        width: 100%;
-        height: 300px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      width: 100%;
+      height: 300px;
     }
     .thumbnail button {
         color: black;
@@ -119,30 +123,103 @@
     .thumbnail p{
         padding: 20px;
     }
-    @media screen and (max-width:767px) {
-        .slide{ text-align: center !important;}
-        .slider .slide img {
-        width: 100%;
-        height: 700px;
-        border-radius: 10px;
-        }
-    
-        .slider-pc{display: none !important;}  
-        .slider-m{display: block !important;}   
-    
-        .slide .caption,
-        .slide .more{      
-        width: 100%;
-        
-        }
-        .slide .caption{     
-            top: 550px !important;
-        }
-        .slide .more{     
-        top: 650px !important;     
-        }
-        
+
+    #story .col-md-6 img,
+    #tomorrow .col-md-6 img{
+      width:100%;
+      height: 100%;
     }
+
+    .container{
+      padding-top: 50px;
+      padding-bottom: 50px;      
+    }
+
+    #story{
+      background: blue;
+      /* position: relative; */
+    }
+
+    #story .col-md-6,
+    #tomorrow .col-md-6{
+      border-radius: 10px !important;
+      background: white;
+      /* position: absolute; */
+    }
+    #story .col-md-6 img,
+    #tomorrow .col-md-6{
+      border-radius: 10px;
+    }
+
+    #story .col-md-6:nth-child(1){
+      /* top:0 !important;
+      left: 0 !important; */
+      z-index: 99999;
+    }
+    #story .col-md-6:nth-child(2){
+      /* top:100px !important;
+      left:600px !important; */
+    }
+    #story .btn,
+    #tomorrow .btn{
+      border: 2px solid black;
+      width: 300px;
+      border-radius: 50px;
+    }
+
+    
+    #brand .col-md-4{
+      background: white;
+      box-sizing: border-box;
+      border: 5px solid #eeeeee;
+      transition: 0.5s;
+    }
+
+    footer{
+      color: white;
+    }
+
+    #brand .col-md-4 img{
+      width: 100%;
+    }
+    
+    #brand .col-md-4:hover{
+      transform: scale(1.05);
+    }
+
+    footer.container-fluid{
+      background: black;
+    }
+
+    footer .container li{
+      list-style: none;
+    }
+
+
+
+  @media screen and (max-width:767px) {
+    .slide{ text-align: center !important;}
+    .slider .slide img {
+      width: 100%;
+      height: 700px;
+      border-radius: 10px;
+    }
+    
+    .slider-pc{display: none !important;}  
+    .slider-m{display: block !important;}   
+    
+    .slide .caption,
+    .slide .more{      
+      width: 100%;
+      
+    }
+    .slide .caption{     
+      top: 550px !important;
+    }
+    .slide .more{     
+      top: 650px !important;     
+    }
+  }
 
   </style>
 
@@ -164,10 +241,49 @@
         ]
       });
     });
-    
   </script>
 </head>
 <body>
+  <!-- navigation -------------------------------------------------------------->
+  <nav class="navbar navbar-expand-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="img/coca logo.svg" alt="coca-cola logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Brands</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Our Company</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Coca-Cola Company</a></li>
+              <li><a class="dropdown-item" href="#">Since 1886</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Discover</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Brand Story</a></li>
+              <li><a class="dropdown-item" href="#">Coke & Meal</a></li>
+              <li><a class="dropdown-item" href="#">Originals</a></li>
+              <li><a class="dropdown-item" href="#">Opener</a></li>
+              <li><a class="dropdown-item" href="#">Creations</a></li>
+              <li><a class="dropdown-item" href="#">CokePLAY App</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sustainability</a>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- /navigation -->
+
   <!-- slider ------------------------------------------------------------------------------------->
   <div class="slider-container">
     <div class="slider">
@@ -175,114 +291,177 @@
         <img class="slider-pc" src="img/slider01.webp" alt="new coca cola">
         <img class="slider-m" src="img/slider01_m.webp" alt="new coca cola">
         <div class="caption">
-            <h3>코카-콜라와 뷔,<br> 이토록 짜릿한 만남</h3>
-            <p>뷔, 코카-콜라 앰배서더 발탁</p>
+          <h3>코카-콜라와 뷔,<br>이토록 짜릿한 만남!</h3>
+          <p>뷔, 코카-콜라 앰배서더 발탁</p>
         </div>
         <div class="more">
-            <a class="btn btn-primary" href="#">자세히 보기</a>
+          <a class="btn btn-primary" href="#">자세히 보기</a>
         </div>
       
       </div>
       <div class="slide">
         <img class="slider-pc" src="img/slider02.webp" alt="신흥시장">
         <img class="slider-m" src="img/slider02_m.webp" alt="신흥시장">
-                <div class="caption">
-            <h3>짜릿함 가득 해방촌 미식 골목<br> 코카-콜라 X 신흥시장</h3>
-            <p>코카-콜라의 짜릿함을 느껴봐!</p>
-        </div>
-        <div class="more">
-            <a class="btn btn-primary" href="#">보러가기</a>
-        </div>
       </div>
       <div class="slide">
         <img class="slider-pc" src="img/slider03.webp" alt="나의 미식 파트너">
         <img class="slider-m" src="img/slider03_m.webp" alt="나의 미식 파트너">
-                <div class="caption-1">
-            <h3>나의 미식 파트너, 코카-콜라</h3>
-            <br>
-            <p>오늘을 제대로 즐기기 위해 필요한 건?<br>맛있는 음식, 그리고 어떤 요리고 제대로 살려주는 코카-콜라</p>
-        </div>
-        <div class="more">
-            <a class="btn btn-primary" href="#">Coke & Meal 알아보기</a>
-        </div>
       </div>
       <div class="slide">
         <img class="slider-pc" src="img/slider04.webp" alt="코카-콜라 X 신흥시장">
         <img class="slider-m" src="img/slider04_m.webp" alt="코카-콜라 X 신흥시장">
-                <div class="caption">
-            <h3>코카-콜라 X 신흥시장<br> 해방촌 미식 골목에서 찾은 짜릿한 식탁</h3>
-            <p>해방촌 신흥시장 맛집 가이드</p>
-        </div>
-        <div class="more">
-            <a class="btn btn-primary" href="#">보러 가기</a>
-        </div>
       </div>
       <div class="slide">
         <img class="slider-pc" src="img/slider05.webp" alt="코카-콜라 X 블루리본 서베이">
         <img class="slider-m" src="img/slider05_m.webp" alt="코카-콜라 X 블루리본 서베이">
-                <div class="caption">
-            <h3>코카-콜라 X 블루리본 서베이<br>2025 레드리본 전국의 맛집 </h3>
-            <p>나의 미식 파트너, 코카-콜라와 함께하는 짜릿한 미식 생활!</p>
-        </div>
-        <div class="more">
-            <a class="btn btn-primary" href="#">보러가기</a>
-        </div>
-      </div>
-      <div class="slide">
-        <img class="slider-pc" src="img/slider06.webp" alt="윈터">
-        <img class="slider-m" src="img/slider06_m.webp" alt="윈터">
-                <div class="caption">
-            <h3>토레타! X 윈터<br> 고화질 B컷 화보 공개</h3>
-            <p>올여름 토레타!가 준비한 특별한 선물,<br>토레타! X 윈터 B컷 화보 공개</p>
-        </div>
-        <div class="more">
-            <a class="btn btn-primary" href="#">보러 가기</a>
-        </div>
-      </div>
-      <div class="slide">
-        <img class="slider-pc" src="img/slider07.webp" alt="카리나">
-        <img class="slider-m" src="img/slider07_m.webp" alt="카리나">
-                <div class="caption">
-            <h3>스프라이트 X 카리나<br>여름 화보 B컷 </h3>
-            <p>스프라이트 써머 캠페인 B컷 화보 고화질 공개</p>
-        </div>
-        <div class="more">
-            <a class="btn btn-primary" href="#">보러 가기</a>
-        </div>
       </div>
     </div>
   </div>
   <!-- /slider -->
 
-  <!-- 이달의 pick ------------------------------------------------------------>
-   <div class="container">
-    <h1><b>이달의 PICK</b></h1>
+  <!-- 이달의 PICK ----------------------------------------------------------------------------->
+  <div id="pick" class="container">
+    <h1>이달의 PICK</h1>
     <div class="row">
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <img src="img/pick01.png" alt="닥터페퍼">
-                <p><strong>달콤하고 부드러운 딸기크림향, 그런데 닥터페퍼 제로라니</strong></p>
-                <button class="btn">더 보기<i class="fa-solid fa-arrow-right"></i></button>
-            </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="img/pick01.png" alt="닥터페퍼제로">
+          <p><strong>달콤하고 부드러운 딸기크림향, 그런데 닥터페퍼 제로라니</strong></p>          
+          <button class="btn">더 보기 <i class="fa-solid fa-arrow-right"></i></button>
         </div>
-        <div class="col-md-4">
-           <div class="thumbnail">
-                <img src="img/pick02.png" alt="스프라이트 제로">
-                <p><strong>달리다 보면 너의 음료를 알게 될 거야, 파워에이드 제로 하임향</strong></p>
-                <button class="btn">더 보기<i class="fa-solid fa-arrow-right"></a>
-                </i></button>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="img/pick02.png" alt="스프라이트제로">
+          <p><strong>달콤하고 부드러운 딸기크림향, 그런데 닥터페퍼 제로라니</strong></p>          
+          <button class="btn">더 보기 <i class="fa-solid fa-arrow-right"></i></button>
         </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <img src="img/pick03.png" alt="파워에이드 제로">
-                <p><strong>치열한 일상 속 Chill한 상쾌함, 스프라이트 제로 Chill</strong></p>
-                <button class="btn">더 보기<i class="fa-solid fa-arrow-right"></i></button>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="img/pick03.png" alt="파이웨이드제로">
+          <p><strong>달콤하고 부드러운 딸기크림향, 그런데 닥터페퍼 제로라니</strong></p>          
+          <button class="btn">더 보기 <i class="fa-solid fa-arrow-right"></i></button>
         </div>
+        
+      </div>
     </div>
-   </div>
-  <!-- /이달의 pick -->
+  </div>
+  <!-- /이달의 PICK -->
+
+  <!-- story ------------------------------------------------------------------------------------>
+  <div id="story" class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>코카-콜라 Real Magic 스토리</h3>
+        <div>
+          1886년 탄생 이후, 코카-콜라가 걸어온 130여 년의 짜릿한 여정! 그 마법같은 이야기 속으로 초대합니다.
+        </div>
+        <div>
+          <a class="btn btn-outline-light text-dark" href="#"><b>자세히 보기</b></a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div>
+          <img src="img/story01.png" alt="coca-cola">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /story -->
+
+  <!-- tomorrow ------------------------------------------------------------------------------------>
+  <div id="tomorrow" class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div>
+          <img src="img/tomorrow01.webp" alt="coca-cola">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3>지속 가능한 미래</h3>
+        <div>
+          지속 가능한 미래를 만들기 위한 코카-콜라의 다양한 활동들을 만나보세요. 전 세계 사람들의 삶과 지역사회에 긍정적인 변화를 만들어 나가기 위해 노력하고 있습니다.
+        </div>
+        <div>
+          <a class="btn btn-outline-light text-dark" href="#"><b>자세히 보기</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /tomorrow -->
   
+  <!-- 브랜드 살펴보기 -------------------------------------------------->
+   <div class="container" id="brand">
+    <h1>브랜드 살벼보기</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="img/brand01.webp" alt="coca-cola">
+      </div>
+      <div class="col-md-4">
+        <img src="img/brand02.webp" alt="sprite">
+      </div>
+      <div class="col-md-4">
+        <img src="img/brand03.webp" alt="fanta">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="img/brand04.webp" alt="dr peppre">
+      </div>
+      <div class="col-md-4">
+        <img src="img/brand05.webp" alt="powerade">
+      </div>
+      <div class="col-md-4">
+        <img src="img/brand06.webp" alt="georgia coffe">
+      </div>
+    </div>
+    <div>
+      <a class="btn btn-outline-dark" href="#">모두 보기</a>
+    </div>
+  </div>
+  <!-- /브랜드 살펴보기 -->
+   
+  <!-- footer ------------------------------------------------------------->
+   <footer class="container-fluid">
+    <div class="container">
+      <img src="img/logo-white-large.svg" alt="coca-cola logo">
+      <hr style="border: 1px solid white;">
+      <div class="row">
+        <div class="col-md-2">
+          <h6>소개</h6>
+          <ul>
+            <li>기업소개</li>
+            <li>히스토리</li>
+            <li>채용</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6>도움이 필요하세요?</h6>
+          <ul>
+            <li>사이드 맵</li>
+            <li>고객 안내</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h6>법적 고지</h6>
+          <ul>
+            <li>이용 약관</li>
+            <li>쿠키 정책</li>
+            <li>쿠키 설정</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+        </div>
+        <hr style="border: 1px solid white;">
+        © 2024 The Coca‑Cola Company. 판권 소유
+      </div>
+    </div>
+  </footer>
+  <!-- /footer -->
 </body>
 </html>
