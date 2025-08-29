@@ -26,7 +26,7 @@
 
   <script>
     $(document).ready(function(){
-      $('#slider .slider').slick({
+      $('.slider').slick({
         centerMode: true,
           centerPadding: '80px', // 양쪽에 보이는 슬라이드 넓이
           slidesToShow: 1,
@@ -40,26 +40,8 @@
               }
             }
           ]
+        });
       });
-
-      $('#month-pick .slider').slick({
-        centerMode: true,
-          centerPadding: '0px', // 양쪽에 보이는 슬라이드 넓이
-          slidesToShow: 3,
-          arrows: false,
-          dots: true,
-          responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                centerPadding: '40px',
-                slidesToShow: 1,
-              }
-            }
-          ]
-      });
-
-    });
   </script>
 </head>
 <body>
@@ -163,7 +145,7 @@
 
    
   <!-- slider ------------------------------------------------------------------------------------->
-  <div id="slider" class="slider-container">
+  <div class="slider-container">
     <div class="slider">
       <div class="slide">
         <img class="slider-pc" src="img/slider01.webp" alt="new coca cola">
@@ -197,35 +179,35 @@
   </div>
   <!-- /slider -->
 
-  <!-- 이달의 PICK ------------------------------------------------------------------------------------->
-  <div id="month-pick" class="slider-container">
+  <!-- 이달의 PICK ----------------------------------------------------------------------------->
+  <div id="pick" class="container">
     <h1>이달의 PICK</h1>
-    <div class="row slider">
-      <div class="col-md-4 slide">
+    <div class="row">
+      <div class="col-md-4">
         <div class="thumbnail">
           <img src="img/pic01.png" alt="닥터페퍼제로">
           <p><strong>달콤하고 부드러운 딸기크림향, 그런데 닥터페퍼 제로라니</strong></p>          
           <button class="btn">더 보기 <i class="fa-solid fa-arrow-right"></i></button>
         </div>
       </div>
-      <div class="col-md-4 slide">
+      <div class="col-md-4">
         <div class="thumbnail">
           <img src="img/pic02.png" alt="스프라이트제로">
           <p><strong>달콤하고 부드러운 딸기크림향, 그런데 닥터페퍼 제로라니</strong></p>          
           <button class="btn">더 보기 <i class="fa-solid fa-arrow-right"></i></button>
         </div>
       </div>
-      <div class="col-md-4 slide">
+      <div class="col-md-4">
         <div class="thumbnail">
           <img src="img/pic03.png" alt="파이웨이드제로">
           <p><strong>달콤하고 부드러운 딸기크림향, 그런데 닥터페퍼 제로라니</strong></p>          
           <button class="btn">더 보기 <i class="fa-solid fa-arrow-right"></i></button>
-        </div>        
+        </div>
+        
       </div>
     </div>
   </div>
   <!-- /이달의 PICK -->
-
 
   <!-- story ------------------------------------------------------------------------------------>
   <div id="story" class="container">
@@ -267,7 +249,7 @@
       </div>
     </div>
   </div>
-  <!-- /tomorrow -->
+  <!-- /story -->
 
   <!-- 브랜드 살펴보기 ------------------------------------------------------------------------------>
   <div id="brand" class="container">

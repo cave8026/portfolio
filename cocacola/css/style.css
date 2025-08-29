@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1&family=Nanum+Gothic&family=Noto+Sans+KR:wght@900&display=swap');
+
+
+.container{
+    padding: 0 5%; /* 위아래 0, 좌우 5% */
+  }
+
+.navbar{
+  background: white;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 70px !important;
+}
+.navbar-brand {
+  margin-left: -95px !important; /* 왼쪽으로 이동 */
+}
+
+  .navbar .nav-link {
+    color: black;
+    font-weight: 600;
+    padding: 20px 15px;
+    text-decoration: none;
+    margin: 15px;
+  }
+
+/* 모바일용 서브메뉴가 안보이게 */
+#collapsibleNavbar-m{ opacity: 0 !important;}
+
+
+body{background: #eeeeee;}
+
+#collapsibleNavbar .nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+#collapsibleNavbar .nav-item .dropdown-toggle::after{
+  border:0 !important; 
+}
+#collapsibleNavbar .nav-item:hover i{
+  animation: ani01 0.5s ease-in-out forwards !important;
+  
+  /* animation-name: ani01; */
+  /* animation-duration: 0.5s; */
+  /* animation-timing-function: ease-in-out; */
+  
+  /* 애니메이션 종료후 마지막 상태(last frame) 유지. 원래 상태로 돌아가지 않음. */
+  /* animation-fill-mode: forwards;   */
+  
+}
+/* 애니메이션 정의. 이름은 ani01 */
+@keyframes ani01 {
+  0%{transform: rotate(0deg);} /*처음 상태*/
+  100%{transform: rotate(90deg);} /*마지막 상태*/
+  
+}
+
+
+.slider-pc{display: block !important;}  
+.slider-m{display: none !important;}  
+
+.slider-container { 
+  max-width: 1500px;
+  height: 570px !important;
+  margin: 50px auto;
+}
+
+.slide{
+  position: relative; /* 부모의 position 설정 */
+}
+
+.slide .caption, 
+.slide .more{
+  position: absolute; /* 자식 position:absolute 설정. grouping */
+}
+.slide .caption{
+  left: 5px;
+  top:200px;
+}
+
+.slide .more{
+  left: 5px;
+  top:300px;
+}
+
+.slider .slide {
+  margin: 0 10px; /* 슬라이드 간 간격 */
+}
+
+.slider .slide img {
+  width: 100%;
+  height: 570px;
+  border-radius: 10px;
+}
+
+.slider .slide .btn{
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-right: 50px;
+  border:none;
+  border-radius: 50px;
+}
+
+.thumbnail{
+  border-radius: 10px !important;
+  background: white;
+}
+.thumbnail img{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 300px;
+}
+#month-pick{
+  padding:0 200px !important;
+}
+
+
+#month-pick .thumbnail{
+  border-radius: 10px !important;
+  background: white;
+}
+#month-pick .thumbnail img{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 300px;
+}
+
+#story .col-md-6 img,
+#tomorrow .col-md-6 img{
+  width:100%;
+  height: 100%;
+}
+
+.container{
+  padding-top: 50px;
+  padding-bottom: 50px;      
+}
+
+#story{
+  background: blue;
+}
+
+#story .col-md-6,
+#tomorrow .col-md-6
+{
+  border-radius: 10px !important;
+  background: white;
+  height:500px !important;
+  padding:0; /* 안쪽 여백 없애기. 이미지가 부모에 딱맞게 하기 위해 */
+  
+}
+#story .col-md-6 img,
+#tomorrow .col-md-6 img
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+#tomorrow .row,
+#story .row{
+  display: flex !important;
+  align-items: center !important;
+  background: green;
+  height: 600px !important;
+  
+}
+
+#story .col-md-6:nth-child(1){
+  align-self: flex-start !important;     
+}
+#story .col-md-6:nth-child(2){
+  align-self:flex-end !important;
+}
+#tomorrow .col-md-6:nth-child(1){
+  align-self: flex-end !important;     
+}
+#tomorrow .col-md-6:nth-child(2){
+  align-self:flex-start !important;
+}
+
+#tomorrow .col-md-6:nth-child(1),
+#story .col-md-6:nth-child(1){
+  margin-right: -100px !important; /* 왼쪽박스를 기준으로 오른쪽박스를 왼쪽으로 이동해서 겹치게 */
+}
+
+#story .col-md-6:nth-child(1){
+  z-index: 999;
+}
+
+#story .col-md-6:nth-child(2),
+#tomorrow .col-md-6:nth-child(1){
+  width:670px;
+}
+
+
+
+/* brand ***********************************************************************************/
+#brand{display: block;}
+#brand-m{display: none;} /* mobile용 brand는 안보이게 */
+
+#brand .col-md-4{
+  background: white;
+  box-sizing: border-box;
+  margin: 10px;
+  transition: 0.5s;
+  width:230px;
+  height: 230px;
+  border-radius: 10px !important;
+
+}
+
+#brand .col-md-4 img{
+  width: 100%;  
+}
+
+#brand .col-md-4:hover{
+  transform: scale(1.05);
+}
+
+footer.container-fluid{
+  background: black;
+} 
+
+
+#footer-pc{display: block;}
+#footer-m{display: none;}
+
+
+/* mobile ################################################################################################################################# */  
+
+@media screen and (max-width:767px) {
+  
+  /* 모바일용 서브메뉴를 1depth에 마우스 커서가 올라갔을 때(hover) 2depth가 펼쳐지는 방식 그대로 사용할 경우 */
+  /* #collapsibleNavbar{
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: white !important; 
+    z-index: 999999999 !important;
+    color: black !important;
+    top:0;
+    left: 0;
+    
+    } */
+    
+    
+/* 코카콜라아이콘, 햄버거메뉴 위로 올라가게 조정 */
+nav .container{padding:0 10px !important;}
+
+#collapsibleNavbar-m{ opacity: 1 !important;}
+
+#collapsibleNavbar-m{
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: white !important; 
+  z-index: 999999999 !important;
+  color: black !important;
+  top:0;
+  left: 0;
+}
+
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  /* content: '\002B'; */
+  content: '\f054'; /* '>' 화살표 아이콘  */
+  font-family: "Font Awesome 7 Free"; /* fontawesom 버젼 7 무료 글꼴*/
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  /* content: "\2212"; */
+  content:'\f078'; /* bottom 화살표 아이콘  */
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+
+.slide{ text-align: center !important;}
+
+.slider-container,
+.slider,
+.slider .slide,
+.slider .slide img {
+  width: 100%;
+  height: 700px !important;
+  border-radius: 10px;
+}
+
+.slider-pc{display: none !important;}  
+.slider-m{display: block !important;}   
+
+.slide .caption,
+.slide .more{      
+  width: 100%;
+  
+}
+.slide .caption{     
+  top: 550px !important;
+}
+.slide .more{     
+  top: 650px !important;     
+}
+
+#month-pick{
+  padding: 50px 0  !important;
+  margin-bottom: 50px !important;
+  background: yellow;
+  height: 500px !important;
+  padding-right: 0 !important;
+}
+
+#month-pick .thumbnail img{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 300px !important;
+}
+
+#story .col-md-6:nth-child(1){
+  width:400px !important;
+  height: 200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: -50px !important; /* 아래쪽 박스가 위로 올라와서 겹치게 */
+}
+
+#brand {display: none;}
+#brand-m {display: block;}
+
+#brand-m .col-md-6{
+  background: white;
+  box-sizing: border-box;
+  margin: 10px;
+  transition: 0.5s;
+  width:210px;
+  height: 210px;
+  border-radius: 10px !important;
+
+}
+
+#brand-m .col-md-6 img{
+  width: 100%;  
+}
+
+#brand-m .col-md-6:hover{
+  transform: scale(1.05);
+}
+
+
+
+#footer-pc{display: none;}
+#footer-m{
+  display: block;
+  background: black;
+  color:white;    
+}
+#footer-m button,
+#footer-m div{
+  background: black;
+  color:white;
+}
+
+
+#footer-m .accordion:after {
+  /* content: '\002B'; */
+  content: '\f107'; /* down 화살표 아이콘  */
+  font-family: "Font Awesome 7 Free"; /* fontawesom 버젼 7 무료 글꼴*/
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+#footer-m .active:after {
+  /* content: "\2212"; */
+  content:'\f106'; /* up 화살표 아이콘  */
+}
+
+}
