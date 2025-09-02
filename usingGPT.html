@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글로벌아이티</title>
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    /* ===== Top Bar ===== */
+    .top-bar {
+      background-color: #082840;
+      color: #fff;
+      height: 50px;
+      padding: 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar img { height: 40px; }
+    .top-bar .auth-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin: 0 0.2rem;
+    }
+    .top-bar .auth-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Main Navigation ===== */
+    .main-nav {
+      background-color: #0d2a52;
+      position: relative;
+      z-index: 1000;
+    }
+    .main-nav .nav-link {
+      color: #fff;
+      margin: 0 15px;
+      font-size: 1rem;
+      position: relative;
+      padding: 15px 0;
+      white-space: nowrap;
+    }
+    .main-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: 8px;
+      background: #00aaff;
+      transition: width 0.4s ease;
+    }
+    .main-nav .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* ===== Submenu ===== */
+    .nav-item {
+      position: relative;
+    }
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 220px;
+      background: #0b223a;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      pointer-events: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .nav-item:hover .submenu {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    /* ===== Hamburger Button ===== */
+    .navbar-toggler {
+      border: none;
+    }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+    /* ===== Carousel ===== */
+    .carousel-item img {
+      width: 100%;
+      height: 500px;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+
+    /* ===== Course Boxes ===== */
+    .course-box {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      background: #fff;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+    }
+    .course-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .course-title {
+      font-weight: bold;
+      font-size: 1rem;
+      text-align: center;
+      min-height: 60px;
+      margin-bottom: 10px;
+    }
+
+    /* ===== Map Section ===== */
+    #map {
+      width: 100%;
+      height: 350px;
+      border-radius: 8px;
+    }
+
+    /* ===== Info Boxes ===== */
+    .info-box {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+    .info-box i {
+      font-size: 1.3rem;
+      margin-right: 12px;
+      color: #dc3545;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background-color: #133469;
+      color: #fff;
+      font-size: 0.9rem;
+      padding-top: 2rem;
+    }
+    .footer .nav-link {
+      font-size: 0.95rem;
+    }
+    .footer-logo img {
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 992px) {
+      .main-nav .navbar-nav {
+        text-align: left;
+      }
+      .submenu {
+        position: relative;
+        top: 0;
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+        box-shadow: none;
+        width: 100%;
+      }
+      .course-img { height: 200px; }
+      #map { height: 250px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="top-bar d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <img src="img/왼쪽로고.svg" alt="Left Logo">
+      </div>
+      <div class="main-logo">
+        <img src="img/글로벌아이티.svg" alt="Global IT Logo" style="height:45px;">
+      </div>
+      <div class="auth-links">
+        <a href="#">회원가입</a> | <a href="#">로그인</a>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark main-nav">
+      <div class="container justify-content-center">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">프로그래머·개발자</a>
+              <div class="submenu"><p>K디지털 풀스택 프레임워크 기반 과정</p></div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">아마존AWS클라우드</a>
+              <div class="submenu"><p>클라우드 기반 엔지니어 전문가 과정</p></div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">AI/빅데이터/머신러닝</a>
+              <div class="submenu"><p>AI와 데이터 분석 전문가 과정</p></div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">정보보안전문가</a>
+              <div class="submenu"><p>보안·해킹 전문가 양성과정</p></div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">온라인문의</a>
+              <div class="submenu"><p>빠른 상담 및 문의 접수</p></div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">교육원 소개</a>
+              <div class="submenu"><p>교육원 안내 및 찾아오시는 길</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Carousel ===== -->
+  <div id="itCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#itCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#itCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#itCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt="IT 이미지 1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt="IT 이미지 2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/3861965/pexels-photo-3861965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt="IT 이미지 3">
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Education Courses ===== -->
+  <div class="container my-5">
+    <div class="row g-4">
+      <div class="col-12 col-md-4 d-flex">
+        <div class="course-box w-100">
+          <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250" class="course-img">
+          <div class="course-title">풀스택 프레임워크(자바,스프링)기반 데이터 융합SW개발자 과정</div>
+          <button class="btn btn-primary btn-sm mt-auto">more</button>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 d-flex">
+        <div class="course-box w-100">
+          <img src="https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250" class="course-img">
+          <div class="course-title">산업프로젝트 기반 인공지능 빅데이터 분석가 과정</div>
+          <button class="btn btn-primary btn-sm mt-auto">more</button>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 d-flex">
+        <div class="course-box w-100">
+          <img src="https://images.pexels.com/photos/3861965/pexels-photo-3861965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250" class="course-img">
+          <div class="course-title">데브옵스MSA컨테이너 기반 클라우드 네이티브 엔지니어 전문가 과정</div>
+          <button class="btn btn-primary btn-sm mt-auto">more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Map & Info ===== -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div id="map"></div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="mb-4 fw-bold">오시는 길</h2>
+        <div class="info-box"><i class="bi bi-geo-alt-fill"></i>서울시 관악구 남부순환로 1820, 에그엘로우 6F, 7F, 14F</div>
+        <div class="info-box"><i class="bi bi-telephone-fill"></i>02-6020-0055</div>
+        <div class="info-box"><i class="bi bi-printer-fill"></i>02-3285-0012</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Kakao Map API ===== -->
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2f295288026f411c6da9c5affbb5bcab"></script>
+  <script>
+    var container = document.getElementById('map'); 
+    var options = { center: new kakao.maps.LatLng(37.4809094, 126.9520957), level: 3 };
+    var map = new kakao.maps.Map(container, options); 
+    var marker = new kakao.maps.Marker({ position: new kakao.maps.LatLng(37.4809094, 126.9520957), draggable: true });
+    marker.setMap(map);
+  </script>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer bg-dark text-light pt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-3 text-center text-md-start">
+          <div class="footer-logo"><img src="img/글로벌아이티.svg" alt="Global IT Logo" style="max-width:180px; background: none;"></div>
+          <p class="small mt-2">글로벌 아이티 인재개발원</p>
+        </div>
+        <div class="col-md-9">
+          <ul class="nav mb-3 justify-content-md-start justify-content-center flex-wrap">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">교육원소개</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">서비스 이용약관</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">개인정보처리방침</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">교습과목 및 교습비</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">프랜차이즈/제휴문의</a></li>
+          </ul>
+          <hr class="border-light">
+          <p class="small mb-1">회사명: (주)글로벌 아이티(IT) 인재개발원 | 사업자등록번호: 119-81-85582 | 대표자명: 이수일</p>
+          <p class="small mb-1">전화번호: 02-6020-0055 | 팩스번호: 02-3285-0012</p>
+          <p class="small mb-1">서울시 관악구 남부순환로 1820, 에그엘로우 14층</p>
+          <p class="small mb-0">Copyright © 2017 (주)글로벌아이티정보기술. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
