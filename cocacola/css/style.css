@@ -25,7 +25,7 @@
 }
 
 .navbar-brand img {
-  max-width: 100%;   /* 부모 크기보다 커지지 않음 */
+  max-width: 100px;   /* 부모 크기보다 커지지 않음 */
   max-height: 50px;  /* 네비게이션 바 높이에 맞춰 조정 */
   height: auto;      /* 비율 유지 */
   object-fit: contain; /* 잘림 없이 축소 */
@@ -191,18 +191,24 @@ body{background: #eeeeee;}
   width: 100%;
   height: 300px;
 }
+
+
 #month-pick{
   padding:0 200px !important;
 }
 #month-pick h1{
   text-align: center;
+  font-family: "Noto Sans KR", sans-serif;font-optical-sizing: auto;font-weight: 900;font-style: normal;
 }
 
 #month-pick p{
   text-align: left;
   margin-bottom: 50px;
   color: black;
+  font-size: 25px;
+  font-family: "Noto Sans KR", sans-serif;font-optical-sizing: auto;font-weight: 100;font-style: normal;
 }
+
 
 #month-pick .thumbnail{
   border-radius: 10px !important;
@@ -226,6 +232,7 @@ body{background: #eeeeee;}
 }
 .thumbnail p{
   padding: 20px;
+  
 }
 .thumbnail button {
   color: black;
@@ -301,6 +308,10 @@ body{background: #eeeeee;}
 .story-text{
     text-align: center;
     margin-top: 30px;
+    
+}
+#story h3, #tomorrow h3 {
+  font-family: "Noto Sans KR", sans-serif;font-optical-sizing: auto;font-weight: 100;font-style: normal;
 }
 
 #story .row,
@@ -333,6 +344,20 @@ body{background: #eeeeee;}
   line-height: 230px;
 }
 
+.container h1{
+  font-family: "Noto Sans KR", sans-serif;font-optical-sizing: auto;font-weight: 100;font-style: normal;
+}
+
+.container .btn{
+  border: 2px solid black;
+  width: 300px;
+  border-radius: 50px;
+}
+
+.container .btn:hover{
+  background: #acacac;
+}
+
 #brand .col-md-4{
   background: white;
   box-sizing: border-box;
@@ -357,12 +382,30 @@ footer.container-fluid{
 } 
 footer .container li{
   list-style: none;
+  position: relative;
+  right: 35px;
 }
 footer{
   color: white;
 }
 #footer-pc{display: block;}
 #footer-m{display: none;}
+
+
+#footer-pc .btn{
+  border: 2px solid white;
+  width: 100px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* flex 중앙 정렬 */
+  left: 500px;
+}
+#footer-pc h6{
+  font-size: 12px;
+  text-align: left;
+}
+
 
 
 /* mobile ################################################################################################################################# */  
@@ -388,7 +431,7 @@ footer{
     max-height: 40px; /* 모바일에서 너무 크지 않게 제한 */
     position: relative;
     left: 100px;
-    top: 10px;
+    top: 0px;
   }
 
 nav .container{padding:0 10px !important;}
@@ -408,12 +451,22 @@ nav .container{padding:0 10px !important;}
 
 #collapsibleNavbar-m #closeMenu {
   position: absolute; /* 절대 위치 지정 */
-  top: -10px;          /* 위에서 20px 아래 */
-  right: 20px;        /* 오른쪽에서 20px 안쪽 */
+  top: -50px;          /* 위에서 20px 아래 */
+  right: -200px;        /* 오른쪽에서 20px 안쪽 */
   font-size: 40px;    /* 글자 크기 */
   background: none;   /* 배경 제거 */
   color: black;       /* 색상 */
   z-index: 9999;      /* 다른 요소 위에 표시 */
+  border: none;
+
+}
+#collapsibleNavbar-m .btn{
+  margin-top: 50px;
+  background: white;
+  color: black;
+  width: 450px;
+  border-radius: 50px;
+  justify-content: center; /* flex 중앙 정렬 */
 }
 
 
@@ -616,5 +669,12 @@ margin-top: 20px;
   border: none;
   height: 5px;
 }
+#footer-m .accordion{
+  font-size: 25px;
+  font-family: "Noto Sans KR", sans-serif;font-optical-sizing: auto;font-weight: 100;font-style: normal;
+}
+#footer-m b{
+  font-size: 12px;
 
+}
 }
