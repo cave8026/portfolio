@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT도서등록</title>
+    <style>
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 기본 4개 */
+      gap: 5px;
+    }
+
+    .box {
+      border: 1px solid #000;
+      padding: 0;
+      width: 300px;
+      height: 200px;
+
+    }
+
+    /* 768px 이하: 2개 */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .box{
+        height: 150px;
+        width: 300px !important;
+      }
+    }
+
+    /* 576px 이하: 1개 */
+    @media (max-width: 576px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .box{
+        height: 150px;
+      }
+    }
+    </style>
+</head>
+<body>
+    <h1>IT도서등록</h1>
+    <form>
+        <b>
+        <ul>
+            <!-- 제목 박스 -->
+            <li> 
+                <label for="title">제목</label>
+                <input type="text" id="title" name="title">
+            </li>
+            
+            <!-- 가격 박스 -->
+            <li>
+                <label for="price">가격</label>
+                <input type="text" id="price" name="price">
+            </li>
+            
+            <!-- 출판사 -->
+            <li>
+                <label for="publisher">출판사</label>
+                <input type="text" id="publisher" name="publisher">
+            </li>
+            
+            <!-- ebook제공 동의체크 -->
+            <li>
+                <input type="radio" name="ebook" id="ebook_y" value="ebook_yes">
+                <label for="ebook_y">ebook 제공</label>
+                <input type="radio" name="ebook" id="ebook_n" value="ebook_no">
+                <label for="ebook_n">ebook 제공 안함</label>
+            </li>
+            
+            <!-- 난이도 -->
+            <li>
+                <label for="prod">난이도</label>
+                <select name="prod" id="hard">
+                    <option value="hard">상</option>
+                    <option value="middle">중</option>
+                    <option value="easy">하</option>
+                </select>
+            </li>
+
+            <!-- 분류 -->
+            <li>
+                <label for="category">분류</label>
+                <label><input type="checkbox" name="backend" value="bace"> 백앤드</label>
+                <label><input type="checkbox" name="frontend" value="front"> 프론트앤드</label>
+                <label><input type="checkbox" name="programming" value="prog"> 프로그래밍언어</label>
+                <label><input type="checkbox" name="dara" value="data"> 데이터베이스</label>
+            </li>
+
+            <!-- 이미지 파일 -->
+            <li>
+                <label for="image">사진</label>
+                <input type="file" name="image" id="image">
+            </li>
+
+            <!-- 책 설명 -->
+            <li>
+                <label for="explanation">책설명</label>
+            </li>
+            <textarea name="explanation" id="explanation" cols="40" rows="5"></textarea>
+            <br>
+            <br>
+            <!-- 등록 버튼 -->
+             <a href="register.jsp">
+                <button type="button">등록</button>
+            </a>
+                <button type="reset">취소</button>
+        </ul>
+        </b>
+    </form>
+    <div class="container">
+        <div class="box">
+            <h1>NEWS</h1>
+        </div>
+        <div class="box">
+            <h1>Event</h1>
+        </div>
+        <div class="box">
+            <h1>Shop</h1>
+        </div>
+        <div class="box">
+            <h1>Movie</h1>
+      </div>
+    </div>
+</body>
+</html>
